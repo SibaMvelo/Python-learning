@@ -96,7 +96,7 @@
 #         print('Is your number:', str(guessed_numbers[mid] + 1))
 #         break
 #     number_of_guesses += 1
-#
+
 # from random import randint
 #
 # number = randint(0, 99)
@@ -113,23 +113,23 @@
 #         print("yay")
 #         exit()
 
-low = 0
-high = len(range(100))
-
-print('Please think of a number between 0 and 100!')
-while high:
-    guess = (low + high) // 2
-    number = input(f'Is your secret number {guess} ')
-    if number == 'l':
-        low = guess - 1
-    elif number == 'h':
-        high = guess + 1
-    elif number == 'c':
-        print('Yay')
-        break
-    else:
-        print("please enter valid input - l,h or c")
-print('Game over. Your secret number was: ' + str(guess))
+# low = 0
+# high = len(range(100))
+#
+# print('Please think of a number between 0 and 100!')
+# while high:
+#     guess = (low + high) // 2
+#     number = input(f'Is your secret number {guess} ')
+#     if number == 'l':
+#         low = guess - 1
+#     elif number == 'h':
+#         high = guess + 1
+#     elif number == 'c':
+#         print('Yay')
+#         break
+#     else:
+#         print("please enter valid input - l,h or c")
+# print('Game over. Your secret number was: ' + str(guess))
 
 
 # print("Please think of a number between 0 and 100!")
