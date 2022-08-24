@@ -118,32 +118,32 @@ Updated balance each month = (Monthly unpaid balance) + (Monthly interest rate x
 #     print('Lowest Payment:', monthlyPaymentRate)
 
 
-# def smallest_pay(initial_amount, annualInterestRate):
-#     for i in range(12):
-#         low = (initial_amount / 12)
-#         high = monthly_payment
-#         mid = (low + high) / 2
-#         monthlyInterestRate = (annualInterestRate / 12)
-#         monthly_payment = monthlyInterestRate * (1 / (1 - (1 + monthlyInterestRate) ** (-12))) * initial_amount
-#         if monthly_payment == mid:
-#             monthly_payment = monthly_payment[mid]
-#         elif monthly_payment < mid:
-#             return low
-#         else:
-#             return high
-#
-#
-# annualInterestRate = float(input('Input annual interest rate '))
-# initial_amount = int(input('Input amount of loan '))
-# print('Monthly payment is : '.format(smallest_pay(initial_amount, annualInterestRate)))
-# def smallest_pay(initial_amount, annualInterestRate):
+def smallest_pay(initial_amount, annualInterestRate):
+    #     for i in range(12):
+    #         low = (initial_amount / 12)
+    #         high = monthly_payment
+    #         mid = (low + high) / 2
+    #         monthlyInterestRate = (annualInterestRate / 12)
+    #         monthly_payment = monthlyInterestRate * (1 / (1 - (1 + monthlyInterestRate) ** (-12))) * initial_amount
+    #         if monthly_payment == mid:
+    #             monthly_payment = monthly_payment[mid]
+    #         elif monthly_payment < mid:
+    #             return low
+    #         else:
+    #             return high
+    #
+    #
+    # annualInterestRate = float(input('Input annual interest rate '))
+    # initial_amount = int(input('Input amount of loan '))
+    # print('Monthly payment is : '.format(smallest_pay(initial_amount, annualInterestRate)))
+    # def smallest_pay(initial_amount, annualInterestRate):
     init_balance = balance
-    monthlyInterestRate = annualInterestRate/12
-    lower = init_balance/12
-    upper = (init_balance * (1 + monthlyInterestRate)**12)/12.0
+    monthlyInterestRate = annualInterestRate / 12
+    lower = init_balance / 12
+    upper = (init_balance * (1 + monthlyInterestRate) ** 12) / 12.0
     epsilon = 0.03
     while abs(balance) > epsilon:
-        monthlyPaymentRate = (upper + lower)/2
+        monthlyPaymentRate = (upper + lower) / 2
         balance = init_balance
         for i in range(12):
             balance = balance - monthlyPaymentRate + ((balance - monthlyPaymentRate) * monthlyInterestRate)
@@ -153,10 +153,6 @@ Updated balance each month = (Monthly unpaid balance) + (Monthly interest rate x
             upper = monthlyPaymentRate
         else:
             break
-            
+
+
 print('Lowest Payment:', round(monthlyPaymentRate, 2))
-
-
-
-
-
