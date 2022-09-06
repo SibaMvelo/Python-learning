@@ -145,9 +145,13 @@ testList = [1, -4, 8, -9]
 #
 # print(count_keys(animals))
 
-mydict = {'george': 'cat', 'amber': 'dog'}
-print(list(mydict.keys())[list(mydict.values()).index('dog')])
-# def please(test):
+# mydict = {'george': 'cat', 'amber': 'dog', 'peace': 'man'}
+# print(list(mydict.keys())[list(mydict.values()).index('man')])
+# # def please(test):
 
 # print()
-    # Prints amber
+# Prints amber
+
+books = {'Author': 'E.G White', 'Book': 'Steps to Christ', 'Read Chapters': {'Faith and acceptance': 'Page 1',
+                                                                             'Repentance': 'Page 22'}}
+print(list(books.keys())[list(books.values()).index('E.G White')])

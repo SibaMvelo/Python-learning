@@ -94,7 +94,6 @@ Monthly unpaid balance = (Previous balance) - (Minimum fixed monthly payment)
 Updated balance each month = (Monthly unpaid balance) + (Monthly interest rate x Monthly unpaid balance)
 """
 
-
 # interest = annualInterestRate / 12.0
 # balance = balance - MonthlyPayment
 # balance = balance + (interest * balance)
@@ -118,41 +117,243 @@ Updated balance each month = (Monthly unpaid balance) + (Monthly interest rate x
 #     print('Lowest Payment:', monthlyPaymentRate)
 
 
-def smallest_pay(initial_amount, annualInterestRate):
-    #     for i in range(12):
-    #         low = (initial_amount / 12)
-    #         high = monthly_payment
-    #         mid = (low + high) / 2
-    #         monthlyInterestRate = (annualInterestRate / 12)
-    #         monthly_payment = monthlyInterestRate * (1 / (1 - (1 + monthlyInterestRate) ** (-12))) * initial_amount
-    #         if monthly_payment == mid:
-    #             monthly_payment = monthly_payment[mid]
-    #         elif monthly_payment < mid:
-    #             return low
-    #         else:
-    #             return high
-    #
-    #
-    # annualInterestRate = float(input('Input annual interest rate '))
-    # initial_amount = int(input('Input amount of loan '))
-    # print('Monthly payment is : '.format(smallest_pay(initial_amount, annualInterestRate)))
-    # def smallest_pay(initial_amount, annualInterestRate):
-    init_balance = balance
-    monthlyInterestRate = annualInterestRate / 12
-    lower = init_balance / 12
-    upper = (init_balance * (1 + monthlyInterestRate) ** 12) / 12.0
-    epsilon = 0.03
-    while abs(balance) > epsilon:
-        monthlyPaymentRate = (upper + lower) / 2
-        balance = init_balance
-        for i in range(12):
-            balance = balance - monthlyPaymentRate + ((balance - monthlyPaymentRate) * monthlyInterestRate)
-        if balance > epsilon:
-            lower = monthlyPaymentRate
-        elif balance < -epsilon:
-            upper = monthlyPaymentRate
-        else:
-            break
+# def smallest_pay(initial_amount, annualInterestRate):
+#     #     for i in range(12):
+#     #         low = (initial_amount / 12)
+#     #         high = monthly_payment
+#     #         mid = (low + high) / 2
+#     #         monthlyInterestRate = (annualInterestRate / 12)
+#     #         monthly_payment = monthlyInterestRate * (1 / (1 - (1 + monthlyInterestRate) ** (-12))) * initial_amount
+#     #         if monthly_payment == mid:
+#     #             monthly_payment = monthly_payment[mid]
+#     #         elif monthly_payment < mid:
+#     #             return low
+#     #         else:
+#     #             return high
+#     #
+#     #
+#     # annualInterestRate = float(input('Input annual interest rate '))
+#     # initial_amount = int(input('Input amount of loan '))
+#     # print('Monthly payment is : '.format(smallest_pay(initial_amount, annualInterestRate)))
+#     # def smallest_pay(initial_amount, annualInterestRate):
+#     init_balance = balance
+#     monthlyInterestRate = annualInterestRate / 12
+#     lower = init_balance / 12
+#     upper = (init_balance * (1 + monthlyInterestRate) ** 12) / 12.0
+#     epsilon = 0.03
+#     while abs(balance) > epsilon:
+#         monthlyPaymentRate = (upper + lower) / 2
+#         balance = init_balance
+#         for i in range(12):
+#             balance = balance - monthlyPaymentRate + ((balance - monthlyPaymentRate) * monthlyInterestRate)
+#         if balance > epsilon:
+#             lower = monthlyPaymentRate
+#         elif balance < -epsilon:
+#             upper = monthlyPaymentRate
+#         else:
+#             break
+#
+#
+# print('Lowest Payment:', round(monthlyPaymentRate, 2))
 
 
-print('Lowest Payment:', round(monthlyPaymentRate, 2))
+# Paste your code into this box
+# s = 'azcbobobegghakl'
+# s.lower()
+# vowels = 0
+# for i in s:
+#     if i == 'a' or i == 'e' or i == 'i' == i == 'o' or i == 'u':
+#         vowels += 1
+# print('Number of vowels: ', vowels)
+
+# s = 'azcbobobegghakl'
+# #
+# #
+# # for i in s:
+# #     if i == 'bob':
+# name = s.split().count('bob')
+#
+# print('Number of times bob occurs is: ', name)
+
+#
+# s = 'azcbobobegghakl'
+#
+# word = 0
+#
+# name = 'bob'
+# for i in range(len(s)):
+#     if s[i:].startswith(name):
+#         word += 1
+#     print(i)
+# print(s[i:].startswith(name))
+# print('Number of times bob occurs is: ', word)
+#
+s = 'azcbobobegghakl'
+
+# def select():
+
+# one=0
+# two=1
+# strang1=''
+# strang2=''
+# while two<len(s):
+#     if two>=len(s):
+#         break
+#     elif s[one]<=s[two]:
+#         strang1+=s[one:two+1]
+#         while two<=len(s):
+#             two+=1
+#             if two>=len(s):
+#                 break
+#             elif s[two]>=strang1[-1]:
+#                 strang1+=s[two]
+#                 if len(strang1)>len(strang2):
+#                     strang2=strang1
+#             else:
+#                 if len(strang1)>len(strang2):
+#                     strang2=strang1
+#                 strang1=''
+#                 first=two-1
+#                 break
+#     else:
+#         if len(s[one])>len(strang2):
+#             strang2=s[one]
+#         one+=1
+#         two+=1
+# print("Longest substring in alphabetical order is:" + strang2)
+# word = big_word = s[0]
+# for i in range(1, len(s)):
+#     if s[i] >= word[-1]:
+#         word += s[i]
+#         if len(word) > len(big_word):
+#             big_word = word
+#     else:
+#         word = s[i]
+#
+# print('Longest substring in alphabetical order is:', big_word)
+#
+# result = s[0]
+# if i in range(1, len(s)):
+#     if s[i] >=
+#
+# """Infinite loop"""
+# numberOfLoops = 0
+# numberOfApples = 2
+# while numberOfLoops < 10:
+#     numberOfApples *= 2
+#     numberOfApples += numberOfLoops
+#     numberOfLoops -= 1
+# print("Number of apples: " + str(numberOfApples))
+
+# num = 10
+# while True:
+#     if num < 7:
+#         print('Breaking out of loop')
+#         break
+#     print(num)
+#     num -= 1
+# print('Outside of loop')
+
+# num = 10
+# while num > 3:
+#     num -= 1
+#     print(num)
+
+# """Infinite loop"""
+
+# num = 100
+# while not False:
+#     if num < 0:
+#         break
+# print('num is: ' + str(num))
+# a = 0
+# while a < 10:
+#     a += 2
+#     print(a)
+# print('Goodbye!')
+
+#
+# a = 12
+# print('hello')
+# while a > 2:
+#     a -= 2
+#     print(a)
+#
+# i = 0
+# n = 1
+# end = 6
+# while n <= end:
+#     i += n
+#     n += 1
+# print(i)
+
+# for i in range(end + 1):
+#     total += i
+#
+# print(total)
+
+# print('Hello!')
+# for i in range(2, 12, 2):
+#     print(i)
+
+# for i in range(10):
+#     i -= 2
+#     print(i)
+
+# a = 12
+# print('Hello!')
+# for a in reversed(range(2, 12, 2)):
+#     print(a)
+
+# for i in range(end + 1):
+#     total += i
+#
+# print(total)
+
+# x = 25
+# epsilon = 0.01
+# step = 0.1
+# guess = 0.0
+#
+# while guess <= x:
+#     if abs(guess**2 -x) < epsilon:
+#         break
+#     else:
+#         guess += step
+# #
+# # if abs(guess**2 - x) >= epsilon:
+# #     print('failed')
+# # else:
+#     print('succeeded: ' + str(guess))
+#
+# print(guess + step)
+
+# x = 25
+# epsilon = 0.01
+# step = 0.1
+# guess = 0.0
+#
+# while guess <= x:
+#     if abs(guess**2 -x) >= epsilon:
+#         guess += step
+#
+# if abs(guess**2 - x) >= epsilon:
+#     print('failed')
+# else:
+#     print('succeeded: ' + str(guess))
+
+x = 25
+epsilon = 0.01
+step = 0.1
+guess = 0.0
+
+while abs(guess**2-x) >= epsilon:
+    if guess <= x:
+        guess += step
+    else:
+        break
+
+if abs(guess**2 - x) >= epsilon:
+    print('failed')
+else:
+    print('succeeded: ' + str(guess))

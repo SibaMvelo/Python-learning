@@ -543,7 +543,6 @@ As you design the function, think very carefully about what the base cases shoul
 
 """Assessment Answer"""
 
-
 # def isIn(char, aStr):
 # '''
 # char: a single character
@@ -577,12 +576,144 @@ As you design the function, think very carefully about what the base cases shoul
 #     else:
 #         return isIn(char, aStr[midIndex + 1:])
 #
-def polysum(n, s):
-    n = (0.25 * n * s ** 2) / tan(pi / n)
-    s = (s * n) ** 2
-    ans = n + s
+# def polysum(n, s):
+#     n = (0.25 * n * s ** 2) / tan(pi / n)
+#     s = (s * n) ** 2
+#     ans = n + s
+#
+#     return ans
+#
+#
+#
 
-    return ans
+# x = 34
+
+# def scope_test(x):
+#     print('x == ', x)
+#     x = 2
+#     print('X is changed to == ', x)
+# scope_test(x)
+# print('x is at outer scope', x)
+
+# def printer():
+#     t = 'to PythonEasy'
+#     fname = (lambda a: t + ' ' + a)
+#     return fname
+#
+#
+# foo = printer()
+# print(foo('Welcome'))
+
+# def rec(a, b):
+#     if a == 0:
+#         return b
+#     print(rec(a - 1, a + b))
+# else:
+#     return rec(a - 2, a + b)
 
 
-print(polysum(4, 5))
+# print(rec(8, 12))
+
+# def rec2(c):
+#     if c == 0:
+#         return 1
+#     return rec2(c - 2)
+#
+#
+# print(rec2(1))
+
+
+# info = [1, 2, 3, 4, 5, 6]
+
+#
+# def joj(info, b):
+#     low = 0
+#     high = len(info) - 1
+#     mid = (low + high) // 2
+#     while low < high:
+#         if b == info[mid]:
+#             return True
+#         elif b < info[mid]:
+#             high = mid - 1
+#             return high
+#         else:
+#             low = mid + 1
+#             return low
+#
+#
+# b = int(input('Input your number '))
+# print(joj(info, b))
+
+# print('Monthly payment is : {}'.format(payment(initial_amount, annualInterestRate)))
+
+# def joy():
+# a = 5
+# b = 3
+
+# def rec_multy(a, b):
+#     if b != 0:
+#         return 0
+#     return a + rec_multy(a, b - 1)
+#
+#
+# print(a * b)
+# print(rec_multy(a, b))
+#
+# a = 5
+# b = 5
+#
+#
+# def rec_mul2(a, b):
+#     if b == 0:
+#         return print('There is noting left')
+#     return rec_mul2((a * b) - 1)
+
+# a = 5
+# b = 5
+
+
+# def one(a):
+#     if a == 0:
+#         return 1
+#     return a - one(a - 1)
+#
+#
+# print(one(5))
+
+b = 0
+
+
+# def two(b):
+#     if b == 5:
+#         return 5
+#     print(b)
+#     return two(b + 1)
+#
+#
+# print(two(b))
+
+# c = 5
+
+
+# def three(c):
+#     if c == 0:
+#         return 1
+#     return c * three(c - 1)
+#
+#
+# # print(c * c)
+# print(three(5))
+
+
+def solution(A):
+    A.sort()
+    N = len(A)
+
+    P1 = A[N - 1] * A[0] * A[1]
+    P2 = A[N - 1] * A[N - 2] * A[N - 3]
+
+    return max(P1, P2)
+
+
+print(solution([-3, 1, 2, -2, 5, 6]))
+

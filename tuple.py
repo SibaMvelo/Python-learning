@@ -1,5 +1,5 @@
-aTup = ('I', 'am', 'a', 'test', 'tuple')
-print(aTup[0::2])
+# aTup = ('I', 'am', 'a', 'test', 'tuple')
+# print(aTup[0::2])
 
 # tup = ('I', 'am', 'a', 'test', 'tuple')
 # print(tuple([x for i, x in enumerate(tup) if i % 2 == 0]))
@@ -13,3 +13,6 @@ print(aTup[0::2])
 
 
 # print(oddTupstirngsles())
+
+# import math
+# print(math.sqrt(23))
